@@ -1,0 +1,41 @@
+<div class="container">
+  <div class="row" style="margin-top: 20%;">
+    <div class="col-md-4 col-xs-2"></div>
+    <a id="ddi" class="btn btn-info col-md-4 col-xs-8">
+    Dipole-dipole Interaction</a>
+  </div>
+  <div class="row">
+    <div class="col-md-4 col-xs-2"></div>
+    <a id="ldf" class="btn btn-info col-md-4 col-xs-8">
+    London dispersion Forces</a>
+  </div>
+  <div class="row">
+    <div class="col-md-4 col-xs-2"></div>
+    <a id="hb" class="btn btn-info col-md-4 col-xs-8">
+    Hydrogen Bonding</a>
+  </div>
+  <div class="row">
+    <div class="col-md-4 col-xs-2"></div>
+    <a id="idi" class="btn btn-info col-md-4 col-xs-8">
+    Ion-dipole interaction</a>
+  </div>
+</div>
+
+
+<script type="text/javascript">
+  top_button.click(function(){
+    location.reload();
+  });
+  $("#ddi").click(function(){
+    open_modal("#ddi",`<img src="img/dipole-dipole.gif" class="img-fluid" width="100%" alt="Responsive image">`);
+  });
+  $("#ldf").click(function(){
+    open_modal("#ldf",`<img src="img/london_animation.gif" class="img-fluid" width="100%" alt="Responsive image">`);
+  });
+  $("#hb").click(function(){
+    open_modal("#hb",`<img src="img/hydrogen_bonding.gif" class="img-fluid" width="100%" alt="Responsive image">`);
+  });
+  $("#idi").click(function(){
+    open_modal("#idi",`<img src="img/ion-dipole.gif" class="img-fluid" width="100%" alt="Responsive image">`);
+  });
+</script>

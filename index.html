@@ -1,0 +1,96 @@
+<html>
+<head>
+	<title>HydroLonDiFy</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<script src="js/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+</head>
+
+<body>
+<nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">HydroLonDiFy</a>
+        <button class="btn btn-light hide" id="ur_btn" style="float:right;margin: 10;">Test</button>
+        </div>
+      </div>
+    </nav>
+    <!-- FOR CONTENT -->
+    <div id="content">
+    </div>
+    <!-----------------MODALS----------------->
+<div class="modal fade" id="modal_window" tabindex="-1" role="dialog" aria-labelledby="modal_title" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title h2" id="modal_title">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" id="modal_content">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary hide">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-------------script------------------------>
+    <script type="text/javascript">
+      top_button = $("#ur_btn");
+      content = $("#content");
+      $(document).ready(function() {
+       $('#content').load("home.html");
+      });
+      function page(where){
+        content.animate({opacity: 0.00,height:0}, 150, function() {
+          content.animate({opacity: 1.00,height:100}, 150).load(where);
+        });
+      }
+      function show_button(){
+        top_button.html("Back").removeClass("hide");
+      }
+      function hide_button(){
+        top_button.addClass("hide");
+      }
+      function youtube(ttl,link){
+        $("#modal_title").html($(ttl).html());
+        $("#modal_content").html(`<div class="embed-responsive embed-responsive-16by9">
+              <iframe class="embed-responsive-item" src="`+link+`" allowfullscreen height=50></iframe>
+            </div>`);
+        $('#modal_window').modal('show');
+        $("#modal_title").html()
+      }
+      $('#modal_window').on('hidden.bs.modal', function () {
+        $("#modal_content").html(null);
+      });
+      function open_modal(ttl,link){
+        $("#modal_title").html($(ttl).html());
+        $("#modal_content").html(link);
+        $('#modal_window').modal('show');
+        $("#modal_title").html()
+      }
+      $('#modal_window').on('hidden.bs.modal', function () {
+        $("#modal_content").html(null);
+      });
+
+    </script>
+</body>
+<footer class="fixed-bottom hide">
+	<div class="container">
+      <a href="register.php" class="btn btn-info col-md-6">Register</a>
+      <a href="index.php?logout" class="btn btn-warning col-md-6">Logout</a>
+  </div>
+</footer>
+<style type="text/css">footer {
+    position: fixed;
+    height: 50px;
+    bottom: 0;
+    width: 100%;
+}</style>
+</html>
