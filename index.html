@@ -75,8 +75,15 @@
         $('#modal_window').modal('show');
         $("#modal_title").html()
       }
+      function modal_link(ttl,link){
+        $("#modal_title").html(ttl);
+        $("#modal_content").html(link);
+        $('#modal_window').modal('show');
+        $("#modal_title").html()
+      }
       $('#modal_window').on('hidden.bs.modal', function () {
         $("#modal_content").html(null);
+        $("#modal_window").remove("modal-fullscreen");
       });
 
     </script>

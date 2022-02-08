@@ -22,6 +22,12 @@
     page("simulate_menu.html");
     show_button();
   });
+  $("#quiz_btn").click(function(){
+    modal_link("Quiz",`<div class="embed-responsive embed-responsive-16by9">
+              <iframe class="embed-responsive-item" src="https://docs.google.com/forms/d/e/1FAIpQLSeI8_vYyaJgM7SJM4Y9AWfLq-tglWZh6yt7bEXEOJr_L-hV1A/viewform?formkey=dGx0b1ZrTnoyZDgtYXItMWVBdVlQQWc6MQ" allowfullscreen height=50></iframe>
+            </div>`);
+    show_button();
+  });
 
   
 </script>
