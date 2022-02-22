@@ -27,13 +27,22 @@
     location.reload();
   });
   $("#ddi").click(function(){
-    open_modal("#ddi",`<img src="img/dipole-dipole.gif" class="img-fluid" width="100%" alt="Responsive image">`);
+    open_modal("#ddi",`<div class="embed-responsive embed-responsive-16by9">
+              <iframe class="embed-responsive-item" src="https://lab.concord.org/embeddable.html#interactives/sam/intermolecular-attractions/2-comparing-dipole-dipole-to-london-dispersion.json" allowfullscreen height=50></iframe>
+            </div>`);
+    // open_modal("#ddi",`<img src="img/dipole-dipole.gif" class="img-fluid" width="100%" alt="Responsive image">`);
   });
   $("#ldf").click(function(){
-    open_modal("#ldf",`<img src="img/london_animation.gif" class="img-fluid" width="100%" alt="Responsive image">`);
+    open_modal("#ldf",`<div class="embed-responsive embed-responsive-16by9">
+              <iframe class="embed-responsive-item" src="https://lab.concord.org/embeddable.html#interactives/sam/intermolecular-attractions/5-strengthening-london-dispersion-attraction.json" allowfullscreen height=50></iframe>
+            </div>`);
+    // open_modal("#ldf",`<img src="img/london_animation.gif" class="img-fluid" width="100%" alt="Responsive image">`);
   });
   $("#hb").click(function(){
-    open_modal("#hb",`<img src="img/hydrogen_bonding.gif" class="img-fluid" width="100%" alt="Responsive image">`);
+    open_modal("#hb",`<div class="embed-responsive embed-responsive-16by9">
+              <iframe class="embed-responsive-item" src="https://phet.colorado.edu/sims/html/states-of-matter/latest/states-of-matter_en.html?fbclid=IwAR23yq3_3qYLx4KO24LihQTe60wzlDJsvwjY4ePMB8-6N3RZZyfBCfv-SYs" allowfullscreen height=50></iframe>
+            </div>`);
+    // open_modal("#hb",`<img src="img/hydrogen_bonding.gif" class="img-fluid" width="100%" alt="Responsive image">`);
   });
   $("#idi").click(function(){
     open_modal("#idi",`<img src="img/ion-dipole.gif" class="img-fluid" width="100%" alt="Responsive image">`);
