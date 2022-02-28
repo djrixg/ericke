@@ -5,3 +5,17 @@
 	white-space: normal;
 	margin-top: 15px;
 }
+body{
+  background-image: url("../img/bg.jpg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -10000000;
+}
+.navbar{
+  background-color: #5bc0de;
+}
+.navbar-brand{
+  color: pink;
+}
