@@ -40,7 +40,39 @@
     </div>
   </div>
 </div>
-<!-------------script------------------------>
+<div class="modal fade" id="fair_use_modal" tabindex="-1" role="dialog" aria-labelledby="modal_title" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body" id="modal_content">
+        <img src="img/fair_use.png" width="100%"/>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary hide">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+<footer class="fixed-bottom hide">
+	<div class="container">
+      <a href="register.php" class="btn btn-info col-md-6">Register</a>
+      <a href="index.php?logout" class="btn btn-warning col-md-6">Logout</a>
+  </div>
+</footer>
+<style type="text/css">footer {
+    position: fixed;
+    height: 50px;
+    bottom: 0;
+    width: 100%;
+}</style>
+</html>
+<footer class="footer">
+      <div class="container">
+        <span class="text-muted btn" id="fair_use">Fair Use Policy</span>
+      </div>
+    </footer>
+    <!-------------script------------------------>
     <script type="text/javascript">
       top_button = $("#ur_btn");
       content = $("#content");
@@ -86,19 +118,7 @@
         $("#modal_content").html(null);
         $("#modal_window").remove("modal-fullscreen");
       });
-
+      $( "#fair_use" ).click(function() {
+        $('#fair_use_modal').modal('show');
+      });
     </script>
-</body>
-<footer class="fixed-bottom hide">
-	<div class="container">
-      <a href="register.php" class="btn btn-info col-md-6">Register</a>
-      <a href="index.php?logout" class="btn btn-warning col-md-6">Logout</a>
-  </div>
-</footer>
-<style type="text/css">footer {
-    position: fixed;
-    height: 50px;
-    bottom: 0;
-    width: 100%;
-}</style>
-</html>
